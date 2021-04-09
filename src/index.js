@@ -9,6 +9,7 @@ const fizzBuzz = require('./fizz-buzz')
 const harmlessRansomNote = require('./harmless-ransom-note')
 const isPalindrome = require('./is-palindrome')
 const isPalindromeSolution = require('./is-palindrome-solution')
+const caesarCipher = require('./caesar-cipher')
 
 const server = http.createServer((req, res) => {
 
@@ -19,7 +20,17 @@ const server = http.createServer((req, res) => {
     // console.log(harmlessRansomNote(noteText, magazineText))
 
     // console.log(isPalindrome('racescar'))
-    console.log(isPalindromeSolution('raccar'))
+    // console.log(isPalindromeSolution('raccar'))
+
+    // console.log(caesarCipher('abc', 1))
+    // console.log(caesarCipher('abc', 26))
+    // console.log(caesarCipher('abc', 28))
+    // console.log(caesarCipher('cheng', -1))
+    // console.log(caesarCipher('cheng', -3))
+    // console.log(caesarCipher('zookeeper', 2))
+    // console.log(caesarCipher('bigcar', -16))
+    console.log(caesarCipher('javascript', -900))
+
 
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/plain');
