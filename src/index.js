@@ -11,8 +11,8 @@ const server = http.createServer((req, res) => {
 
     // fizzBuzz(30)
 
-    const noteText = 'Cheng likes basketball shoes'
-    const magazineText = 'My name is Cheng Cheng likes to play basketball'
+    const noteText = 'Cheng Chin likes basketball'
+    const magazineText = 'My name is Cheng Chin likes to play basketball'
     console.log(harmlessRansomNote(noteText, magazineText))
 
     res.statusCode = 200;

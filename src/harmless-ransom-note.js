@@ -30,7 +30,7 @@ module.exports = (noteText, magazineText) => {
     console.log(magazineMap)
     const noteWords = noteText.split(' ')
     for (let i = 0; i < noteWords.length; i++) {
-        let numberOfOccurrence = magazineMap[magazineWords[i]]
+        let numberOfOccurrence = magazineMap[noteWords[i]]
         if (!numberOfOccurrence) {
             console.log('Undefined number of occurrence')
             console.log(magazineMap)
@@ -42,7 +42,7 @@ module.exports = (noteText, magazineText) => {
             console.log(magazineMap)
             return false
         }
-        magazineMap[magazineWords[i]] = numberOfOccurrence
+        magazineMap[noteWords[i]] = numberOfOccurrence
     }
     console.log(magazineMap)
     return true
