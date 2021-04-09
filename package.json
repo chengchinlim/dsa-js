@@ -1,0 +1,20 @@
+{
+  "name": "dsa-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chengchinlim/dsa-js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chengchinlim/dsa-js/issues"
+  },
+  "homepage": "https://github.com/chengchinlim/dsa-js#readme"
+}
