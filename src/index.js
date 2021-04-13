@@ -12,6 +12,7 @@ const isPalindromeSolution = require('./is-palindrome-solution')
 const caesarCipher = require('./caesar-cipher')
 const reverseWords = require('./reverse-words')
 const reverseArray = require('./reverse-array')
+const getMeanMedianMode = require('./mean-median-mode')
 
 const server = http.createServer((req, res) => {
 
@@ -38,8 +39,13 @@ const server = http.createServer((req, res) => {
 
     // console.log(reverseArray(['C', 'h', 'e', 'n', 'g']))
     // console.log(reverseArray(['C', 'h', 'e', 'n', 'g', 'L', 'i', 'm']))
-    console.log(reverseArray([1, 2, 3, 4, 5, 6]))
-    console.log(reverseArray([1, 2, 3, 4, 5, 6, 7]))
+    // console.log(reverseArray([1, 2, 3, 4, 5, 6]))
+    // console.log(reverseArray([1, 2, 3, 4, 5, 6, 7]))
+
+    // getMeanMedianMode([1, 2, 3, 4, 10, 10])
+    // getMeanMedianMode([1, 2, 3, 4, 5, 3])
+    getMeanMedianMode([1, 2, 3, 4, 5, 4, 6, 1])
+    getMeanMedianMode([9, 10, 23, 10, 23, 9])
 
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/plain');
