@@ -13,6 +13,8 @@ const caesarCipher = require('./caesar-cipher')
 const reverseWords = require('./reverse-words')
 const reverseArray = require('./reverse-array')
 const getMeanMedianMode = require('./mean-median-mode')
+const twoSum = require('./two-sum')
+const binarySearch = require('./binary-search')
 
 const server = http.createServer((req, res) => {
 
@@ -44,8 +46,16 @@ const server = http.createServer((req, res) => {
 
     // getMeanMedianMode([1, 2, 3, 4, 10, 10])
     // getMeanMedianMode([1, 2, 3, 4, 5, 3])
-    getMeanMedianMode([1, 2, 3, 4, 5, 4, 6, 1])
-    getMeanMedianMode([9, 10, 23, 10, 23, 9])
+    // getMeanMedianMode([1, 2, 3, 4, 5, 4, 6, 1])
+    // getMeanMedianMode([9, 10, 23, 10, 23, 9])
+
+    // console.log(twoSum([1, 6, 4, 5, 3, 3], 7))
+    // console.log(twoSum([40, 11, 19, 17, -12], 28))
+
+    console.log(binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9], 3))
+    console.log(binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9], 8))
+    console.log(binarySearch([2, 4, 6, 8, 10, 12], 3))
+    console.log(binarySearch([1, 3, 5, 7, 9, 11], 8))
 
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/plain');
