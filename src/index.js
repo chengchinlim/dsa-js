@@ -5,19 +5,20 @@ const http = require('http');
 const hostname = '127.0.0.1';
 const port = 3111;
 
-const fizzBuzz = require('./fizz-buzz')
-const harmlessRansomNote = require('./harmless-ransom-note')
-const isPalindrome = require('./is-palindrome')
-const isPalindromeSolution = require('./is-palindrome-solution')
-const caesarCipher = require('./caesar-cipher')
-const reverseWords = require('./reverse-words')
-const reverseArray = require('./reverse-array')
-const getMeanMedianMode = require('./mean-median-mode')
-const twoSum = require('./two-sum')
-const binarySearch = require('./binary-search')
-const fibonacciRecursion = require('./fibonacci-recursion')
-const fibonacciFor = require('./fibonacci-for')
-const fibonacciMem = require('./fibonacci-mem')
+const fizzBuzz = require('./udemy-eric/fizz-buzz')
+const harmlessRansomNote = require('./udemy-eric/harmless-ransom-note')
+const isPalindrome = require('./udemy-eric/is-palindrome')
+const isPalindromeSolution = require('./udemy-eric/is-palindrome-solution')
+const caesarCipher = require('./udemy-eric/caesar-cipher')
+const reverseWords = require('./udemy-eric/reverse-words')
+const reverseArray = require('./udemy-eric/reverse-array')
+const getMeanMedianMode = require('./udemy-eric/mean-median-mode')
+const twoSum = require('./udemy-eric/two-sum')
+const binarySearch = require('./udemy-eric/binary-search')
+const fibonacciRecursion = require('./udemy-eric/fibonacci-recursion')
+const fibonacciFor = require('./udemy-eric/fibonacci-for')
+const fibonacciMem = require('./udemy-eric/fibonacci-mem')
+const sieveOfEratosthenes = require('./udemy-eric/sieve-of-eratosthenes')
 
 const server = http.createServer((req, res) => {
 
@@ -62,9 +63,14 @@ const server = http.createServer((req, res) => {
 
     // console.log(fibonacciRecursion(9))
     // console.log(fibonacciFor(8))
-    console.log(fibonacciMem(4, []))
-    console.log(fibonacciMem(8, []))
-    console.log(fibonacciMem(9, []))
+    // console.log(fibonacciMem(4, []))
+    // console.log(fibonacciMem(8, []))
+    // console.log(fibonacciMem(9, []))
+
+    console.log(sieveOfEratosthenes(10))
+    console.log(sieveOfEratosthenes(20))
+    console.log(sieveOfEratosthenes(30))
+
 
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/plain');
