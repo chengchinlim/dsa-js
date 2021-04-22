@@ -21,6 +21,7 @@ const fibonacciMem = require('./udemy-eric/fibonacci-mem')
 const sieveOfEratosthenes = require('./udemy-eric/sieve-of-eratosthenes')
 const bubbleSort = require('./udemy-eric/bubble-sort')
 const mergeSort = require('./udemy-eric/merge-sort')
+const maxStockProfit = require('./udemy-eric/max-stock-profit')
 
 const server = http.createServer((req, res) => {
 
@@ -77,7 +78,10 @@ const server = http.createServer((req, res) => {
     // console.log(bubbleSort([20, 20, 31, 1, 12, 12]))
     // console.log(bubbleSort([3, -9, -12, -1, 8]))
 
-    console.log(mergeSort([6000, 34, 203, 3, 746, 200, 984, 198, 764, 1, 9, 1]))
+    // console.log(mergeSort([6000, 34, 203, 3, 746, 200, 984, 198, 764, 1, 9, 1]))
+
+    console.log(maxStockProfit([32, 46, 26, 38, 40, 48, 42]))
+    console.log(maxStockProfit([10, 18, 4, 5, 9, 6, 16, 12]))
 
 
     res.statusCode = 200;
