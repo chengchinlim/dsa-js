@@ -19,6 +19,8 @@ const fibonacciRecursion = require('./udemy-eric/fibonacci-recursion')
 const fibonacciFor = require('./udemy-eric/fibonacci-for')
 const fibonacciMem = require('./udemy-eric/fibonacci-mem')
 const sieveOfEratosthenes = require('./udemy-eric/sieve-of-eratosthenes')
+const bubbleSort = require('./udemy-eric/bubble-sort')
+const mergeSort = require('./udemy-eric/merge-sort')
 
 const server = http.createServer((req, res) => {
 
@@ -67,9 +69,15 @@ const server = http.createServer((req, res) => {
     // console.log(fibonacciMem(8, []))
     // console.log(fibonacciMem(9, []))
 
-    console.log(sieveOfEratosthenes(10))
-    console.log(sieveOfEratosthenes(20))
-    console.log(sieveOfEratosthenes(30))
+    // console.log(sieveOfEratosthenes(10))
+    // console.log(sieveOfEratosthenes(20))
+    // console.log(sieveOfEratosthenes(30))
+
+    // console.log(bubbleSort([5, 3, 8, 2, 1, 4]))
+    // console.log(bubbleSort([20, 20, 31, 1, 12, 12]))
+    // console.log(bubbleSort([3, -9, -12, -1, 8]))
+
+    console.log(mergeSort([6000, 34, 203, 3, 746, 200, 984, 198, 764, 1, 9, 1]))
 
 
     res.statusCode = 200;
