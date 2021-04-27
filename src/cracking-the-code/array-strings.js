@@ -177,5 +177,88 @@ module.exports = {
             }
         }
         return charArr.join('')
+    },
+    // time: O(N^2)
+    // space: O(1)
+    q17_1: function rotateSquareMatrix(matrix) {
+        // 1. Create a temp var
+        let temp = ''
+        // 2. Swap four times for each element in a row except the last element
+        let offset = 0
+        while (offset < Math.trunc(matrix.length / 2)) {
+            let topLeftX = offset
+            let topLeftY = matrix.length - 1 - offset
+            let topRightX = matrix.length - 1 - offset
+            let topRightY = matrix.length - 1 - offset
+            let bottomLeftX = offset
+            let bottomLeftY = offset
+            let bottomRightX = matrix.length - 1 - offset
+            let bottomRightY = offset
+            while (topLeftY > 0) {
+                //   a. top left swap with bottom left
+                temp = matrix[bottomLeftX][bottomLeftY]
+                matrix[bottomLeftX][bottomLeftY] = matrix[topLeftX][topLeftY]
+                matrix[topLeftX][topLeftY] = temp
+                //   b. bottom left swap with bottom right
+                temp = matrix[bottomRightX][bottomRightY]
+                matrix[bottomRightX][bottomRightY] = matrix[bottomLeftX][bottomLeftY]
+                matrix[bottomLeftX][bottomLeftY] = temp
+                //   c. bottom right swap with top right
+                temp = matrix[topRightX][topRightY]
+                matrix[topRightX][topRightY] = matrix[bottomRightX][bottomRightY]
+                matrix[bottomRightX][bottomRightY] = temp
+                // console.log(matrix)
+                // Rotate the indices
+                if (topLeftY === offset + 1) { // outer layer finishes
+                    // move in inner layer
+                    offset++
+                    break
+                } else {
+                    topLeftY--
+                    bottomLeftX++
+                    bottomRightY++
+                    topRightX--
+                }
+            }
+        }
+        return matrix
+    },
+    // time: O(N^2)
+    // space: O(1)
+    q18_1: function zeroMatrix(matrix) {
+        // 1. iterate the matrix to check for '0' element
+        //    a. if it exists [i, j]
+        //       add i into row array,
+        //       add j into column array
+        const rowsToBeZeroed = []
+        const columnsToBeZeroed = []
+        const numberOfRows = matrix.length
+        const numberOfColumns=  matrix[0].length
+        for (let i = 0; i < numberOfRows; i++) {
+            for (let j = 0; j < numberOfColumns; j++) {
+                if (matrix[i][j] === 0) {
+                    rowsToBeZeroed.push(i)
+                    columnsToBeZeroed.push(j)
+                }
+            }
+        }
+        // console.log(rowsToBeZeroed)
+        // console.log(columnsToBeZeroed)
+        // 2. make all [i, x] and [j, y] to '0'
+        for (let i = 0; i < rowsToBeZeroed.length; i++) {
+            const tempIndex = rowsToBeZeroed[i]
+            // console.log(tempIndex)
+            for (let j = 0; j < numberOfColumns; j++) {
+                matrix[tempIndex][j] = 0
+            }
+        }
+        for (let i = 0; i < columnsToBeZeroed.length; i++) {
+            const tempIndex = columnsToBeZeroed[i]
+            // console.log(tempIndex)
+            for (let j = 0; j < numberOfRows; j++) {
+                matrix[j][tempIndex] = 0
+            }
+        }
+        return matrix
     }
 }
