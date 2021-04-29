@@ -260,5 +260,21 @@ module.exports = {
             }
         }
         return matrix
+    },
+    // time: O(N)
+    // space: O(N)
+    q19_1: function stringRotation(s1, s2) {
+        // 1. move the first char to the last char
+        // 2. check if both strings are identical
+        //    if identical returns true
+        // 3. iterate n (size of the string) times
+        // 4. if none matches, return false
+        for (let i = 0; i < s1.length; i++) {
+            const temp = s1.substring(i) + s1.substring(0, i)
+            if (temp === s2) {
+                return true
+            }
+        }
+        return false
     }
 }
