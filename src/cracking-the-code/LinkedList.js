@@ -6,6 +6,10 @@ class LinkedList {
     }
 
     add(node) {
+        if (!this.head) {
+            this.head = node
+            return
+        }
         let temp = this.head
         while (temp) {
             if (!temp.next) {
