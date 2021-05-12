@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node src/cracking-the-code/index-linked-list.js"
+    "dev": "node src/cracking-the-code/index-stack-queue.js"
   },
   "repository": {
     "type": "git",

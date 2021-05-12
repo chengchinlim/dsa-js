@@ -1,6 +1,6 @@
 
 const LinkedList = require('./LinkedList')
-const MyNode = require('./MyNode')
+const MyNode = require('./LinkedNode')
 
 module.exports = {
     // time: O(N^2)

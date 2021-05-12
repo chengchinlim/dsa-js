@@ -2,7 +2,7 @@
 const http = require('http');
 
 const linkedList = require('./linked-list')
-const MyNode = require('./MyNode')
+const MyNode = require('./LinkedNode')
 const LinkedList = require('./LinkedList')
 
 const hostname = '127.0.0.1';
